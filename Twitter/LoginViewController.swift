@@ -18,20 +18,20 @@ class LoginViewController: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true{
+        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
             self.performSegue(withIdentifier: "loginToHome", sender: self)
         }
     }
     
     @IBAction func onLoginButton(_ sender: Any) {
         //print("hello World")
-        let myUrl = "https://api.twitter.com/oauth/request_token"
-        TwitterAPICaller.client?.login(url: myUrl, success: {
+        let twitterUrl = "https://api.twitter.com/oauth/request_token"
+        TwitterAPICaller.client?.login(url: twitterUrl, success: {
             
             UserDefaults.standard.set(true, forKey: "userLoggedIn")
             self.performSegue(withIdentifier: "loginToHome", sender: self)
         }, failure: { (Error) in
-            print("could not login")
+            print("Could not login.")
         })
     }
     
