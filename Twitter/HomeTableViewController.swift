@@ -91,12 +91,31 @@ class HomeTableViewController: UITableViewController {
         
         cell.userNameLabel.text = user["name"] as? String
         cell.tweetContent.text = tweetArray[indexPath.row]["text"] as? String
+        
+        //adding time
+        let twitterTimestamp = (tweetArray[indexPath.row]["created_at"] as? String)!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "eee MMM dd HH:mm:ss ZZZZ yyyy"
+        if let date = dateFormatter.date(from: twitterTimestamp) {
+            let df = DateFormatter()
+            df.dateStyle = .short
+            df.timeStyle = .short
+            let result = df.string(from: date)
+            //cell.tweetDateLabel.text = result
+        }
+        
+        
+        
         let imageUrl = URL(string: (user["profile_image_url_https"] as? String)!)
         let data = try? Data(contentsOf: imageUrl!)
         
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
         }
+        cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
+        
         return cell
     }
 
