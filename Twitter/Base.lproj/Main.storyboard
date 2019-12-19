@@ -120,6 +120,9 @@
                                 <action selector="onLogout:" destination="WOC-XQ-igL" id="8m7-Hf-6T0"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="6rn-Ni-mKP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t10-vo-pFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
