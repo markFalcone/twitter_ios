@@ -173,10 +173,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tweetTextView" destination="uGB-cB-n8h" id="eVQ-8p-tQ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adA-ef-61V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2095.1999999999998" y="-17.541229385307346"/>
+            <point key="canvasLocation" x="1961" y="-3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r9v-wL-PfX">
