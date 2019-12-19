@@ -21,6 +21,11 @@ class HomeTableViewController: UITableViewController {
         twitterRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = twitterRefreshControl
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        self.loadTweets()
+    }
     // loading tweets
      @objc func loadTweets() {
         numberOfTweets = 20
