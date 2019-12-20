@@ -100,7 +100,7 @@ class HomeTableViewController: UITableViewController {
             let df = DateFormatter()
             df.dateStyle = .short
             df.timeStyle = .short
-            let result = df.string(from: date)
+            //let result = df.string(from: date)
             //cell.tweetDateLabel.text = result
         }
         
