@@ -26,7 +26,7 @@ I am working on showing a date and implementing the tweet text countdown
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/markFalcone/twitter_ios/blob/master/Gif/gif3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 **twitter_ios** is a basic twitter app to read your tweets.
 
 Time spent: **4** hours spent in total
